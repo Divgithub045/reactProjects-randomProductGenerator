@@ -17,3 +17,4 @@ Fetches random product data.
 Displays product details (name, price, etc.).
 ### API
 Uses the Fake Store API.
+![alt text](image.png)

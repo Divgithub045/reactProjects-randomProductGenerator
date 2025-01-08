@@ -30,7 +30,6 @@ function Random()
             <p className="message-text">You Have Hit the button {times} times</p>
             <button onClick={getProduct}>Generate Random</button>
         </div>
-
-    )
+        )
 }
 export default Random;
