@@ -1,4 +1,4 @@
-# Random Product Generator
+# Random Product Generator fetching store API
 A simple React app that fetches and displays random products from an API and uses React Hook useState().
 
 ### Setup
