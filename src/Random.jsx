@@ -6,6 +6,8 @@ function Random()
     const[title,setTitle] = useState("Product Title");
     const [image,setImage] = useState();
     const[times,setTimes]=useState(0);
+    const[price,setPrice] = useState(0);
+    const[description,setDescription] = useState();
 
     async function getProduct()
     {
@@ -16,6 +18,8 @@ function Random()
             const randomProduct =data[randomNumber];
             setTitle(randomProduct.title);
             setImage(randomProduct.image);
+            setPrice(randomProduct.price);
+            setDescription(randomProduct.description);
             setTimes(times+1);
 
             
@@ -24,11 +28,17 @@ function Random()
         }
     }
     return (
+        
         <div className="product-container">
-            <h1>{title}</h1>
+            <h1>Random Product Generator Project</h1>
+            <h2>{title}</h2>
             <img src={image} alt="image" />
+            <br />
+            <p>${price}</p>
+            <p><i>{description}</i></p>
             <p className="message-text">You Have Hit the button {times} times</p>
             <button onClick={getProduct}>Generate Random</button>
+
         </div>
         )
 }
